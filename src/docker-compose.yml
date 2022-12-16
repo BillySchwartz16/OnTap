@@ -31,7 +31,7 @@ services:
 
   react:
     build:
-      context: ./react
+      context: ./react/app
       dockerfile: Dockerfile
     ports:
       - "3000:3000"

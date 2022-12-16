@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+    ontap:
+        image: ontap:0.1
+        ports:
+            - 81:80
+        restart: always

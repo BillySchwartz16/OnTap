@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- bootstrap 5 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0">
+    <link href="../../static/index.css" rel="stylesheet">
+ </head>
+ <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-md-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+            </nav>
+ <body>
+<!-- one card -->
+<div class="step-container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="stepper" id="step1" style="border: 5px solid green"><a>step 1</a></div>
+        </div>
+            <hr class="col-md-auto">
+        <div class="col-md-auto">
+            <div class="stepper" id="step2"><a>step 2</a></div>  
+        </div>
+            <hr class="col-md-auto">
+        <div class="col-md-auto">
+            <div class="stepper" id="step3"><a>step 3</a></div>
+        </div>
+        <hr class="col-md-auto">
+        <div class="col-md-auto">
+            <div class="stepper" id="step4"><a>step 4</a></div>
+        </div>
+        <hr class="col-md-auto">
+        <div class="col-md-auto">
+            <div class="stepper" id="step5"><a>step 5</a></div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="form-container">
+        <div class="myform">
+        <div class="exisitng-realm">
+            <h5>Is this an:</h1>
+            <div class="realm">
+                <!-- button existing realm -->
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Existing Realm
+                </button>
+                
+            </div>
+            <a>or</a>
+            <hr>
+            <div class="new-realm">
+                <!-- button new realm -->
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    New Realm
+                </button>
+        </div>
+
+        </div>
+        </div>
+        </div>
+
+<div class="body-wrapper" style="margin: 10%">
+    <!-- next button -->
+    <div class="row">
+        <div class="col-md-auto">
+            <button class="btn btn-primary" id="next" onClick="nextGreen()">Next</button>
+        </div>
+<br>
+<br>
+
+        <div class="row">
+            <div class="col-md-auto">
+                <button class="btn btn-primary" id="data" onClick="gettable('billy')">Next</button>
+            </div>
+</div>
+</div>
+
+
+
+<div class="table-container">
+    <table class="table table-striped table-bordered table-hover" id="billy">
+        <thead>
+            <tr>
+                <th>firstname</th>
+                <th>Lastname</th>
+                <th>dob</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+           {% for l in output %}
+           
+                <td>{{ l[0] }}</td>
+                <td>{{ l[1] }}</td>
+                <td>{{ l[2] }}</td>
+            </tr>
+           
+            {% endfor %}
+
+            <br>
+            <br>
+            
+            <button class="btn btn-primary" id="data" onClick="updatetable('billy')">search</button>
+ </body>
+
+
+
+</html>
+
+<script>
+    //when next button clicked turn to next step border green
+    var i = 1;
+    function nextGreen(){
+        if (i < 5) {
+            i++;
+            var step = document.getElementById("step" + i);
+            step.style.border = "5px solid green";
+            var laststep = document.getElementById("step" + (i - 1));
+            laststep.style.border = "1px solid black";
+        }
+        else{
+            i = 1;
+            var thisstep = document.getElementById("step" + i);
+            thisstep.style.border = "5px solid green";
+            var step = document.getElementById("step5");
+            step.style.border = "1px solid black";
+        }
+    };
+
+    //xhr api call to /index route on button click
+    function gettable(firstname){
+    xhr = new XMLHttpRequest();
+    xhr.open("GET", "/index/"+firstname, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(this.responseText);
+            console.log(data);
+        }
+    };
+}
+
+function updatetable(firstname){
+    //add row to table: firstname, pending, dob
+    var table = document.getElementById("billy");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = "billy";
+    cell2.innerHTML = "pending";
+    //cell 2 id lastname
+    cell2.setAttribute("id", "lastname");
+    cell3.innerHTML = "dob";
+    xhr = new XMLHttpRequest();
+    xhr.open("GET", "/getitem/"+firstname, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(this.responseText);
+            console.log(data);
+            //set lastname to last item in data
+            var lastname = document.getElementById("lastname");
+            lastname.innerHTML = data[data.length - 1];
+            //flash lastname green for 1 second
+            lastname.style.backgroundColor = "green";
+            setTimeout(function(){
+                lastname.style.backgroundColor = "white";
+            }, 1000);
+        }
+    };
+
+}
+
+
+</script>

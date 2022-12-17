@@ -1,0 +1,9 @@
+{
+  "index": [
+    {
+      "propName": "hello",
+      "propType": "string",
+      "defaultValue": "hello"
+    }
+  ]
+}

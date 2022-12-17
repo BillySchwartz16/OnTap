@@ -1,0 +1,32 @@
+.card-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 300px); /* set the row size to the card size */
+    grid-template-columns: repeat(auto-fit, 300px); /* set the column size to the card size */
+    grid-gap: 4px; /* add a gap of 4 pixels */
+    margin: 0 auto; /* center the grid on the screen */
+    max-width: calc(4 * 300px + 3 * 4px); /* set the maximum width to fit 4 cards with a gap of 4 pixels */
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px; /* set the card width to 300 pixels */
+    height: 300px; /* set the card height to 300 pixels */
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    border: 1px solid #ccc;
+  }
+
+  .card-header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    color: #000;
+  }
+
+  .card-body {
+    padding: 0 20px;
+  }
+
+  .card-body p {
+    margin: 0;
+  }
